@@ -6,36 +6,83 @@
     <title>Dimitris Vatistas - Web Designer</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            background-image: url('image.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: #ffffff; /* Set text color to white */
         }
 
         header {
+            padding: 20px;
             text-align: center;
-            margin-bottom: 30px;
         }
 
-        h1 {
-            margin-bottom: 10px;
+        section {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #ffffff; /* Set text color to white */
         }
 
-        h2 {
-            color: #3498db;
+        h1, h2, h3 {
+            color: #8B0000; /* Dark red */
         }
 
         a {
-            color: #3498db;
+            color: #8B0000; /* Dark red */
             text-decoration: none;
-            font-weight: bold;
         }
 
         a:hover {
             text-decoration: underline;
         }
 
-        .experience, .skills, .projects, .connect {
-            margin-bottom: 30px;
+        .join-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8B0000; /* Dark red */
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .join-button:hover {
+            background-color: #571515; /* Darker shade of dark red for hover effect */
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: 'Open Sans Regular';
+            font-style: normal;
+            font-weight: 400;
+            src: url('chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/open-sans-v18-latin-regular.woff');
+        }
+
+        @font-face {
+            font-family: 'Open Sans Bold';
+            font-style: normal;
+            font-weight: 800;
+            src: url('chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/OpenSans-Bold.woff');
+        }
+
+        @font-face {
+            font-family: 'Open Sans ExtraBold';
+            font-style: normal;
+            font-weight: 800;
+            src: url('chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/open-sans-v18-latin-800.woff');
         }
     </style>
 </head>
@@ -45,38 +92,24 @@
         <h1>👨‍💻 Dimitris Vatistas - Web Designer 👨‍💻</h1>
     </header>
 
-    <section class="about">
-        <h2>About Me</h2>
-        <p>
-            Hello there! I'm Dimitris Vatistas, a passionate web designer with a knack for creating visually stunning and user-friendly websites.
-            I've had the privilege of working with innovative companies, leaving my mark on the digital world.
-        </p>
-    </section>
+    <section>
+        <h2>🌐 Portfolio | <a href="linkr.bio/dimitrisvatistas">Website</a> | <a href="https://www.linkedin.com/in/dimitris-vatistas/">LinkedIn</a></h2>
+        <p>Hello there! I'm Dimitris Vatistas, a passionate web designer with a knack for creating visually stunning and user-friendly websites. I've had the privilege of working with innovative companies, leaving my mark on the digital world.</p>
 
-    <section class="experience">
         <h2>🚀 Experience</h2>
 
         <article>
             <h3><a href="https://sneakverse.company.site">SneakVerse</a> - Crafting Custom Sneakers</h3>
             <p><strong>Role:</strong> Lead Web Designer | <strong>Duration:</strong> 2 years</p>
-            <p>
-                At SneakVerse, I played a pivotal role in translating the essence of custom sneakers into a visually appealing and engaging online experience.
-                Collaborating closely with the marketing and design teams, I contributed to creating a dynamic platform that showcases the artistry of custom footwear.
-            </p>
+            <p>At SneakVerse, I played a pivotal role in translating the essence of custom sneakers into a visually appealing and engaging online experience. Collaborating closely with the marketing and design teams, I contributed to creating a dynamic platform that showcases the artistry of custom footwear.</p>
         </article>
 
         <article>
             <h3><a href="https://techvat.000webhostapp.com/">HackItFirst</a> - Learn Ethical Hacking and Game Hacks</h3>
             <p><strong>Role:</strong> Web Design Maestro | <strong>Duration:</strong> 1.5 years</p>
-            <p>
-                Joining HackItFirst allowed me to explore the exciting intersection of ethical hacking and game modification.
-                I designed a user-friendly interface for their hacking lessons platform and crafted visually striking pages for game hacks.
-                This experience honed my skills in presenting complex information in an accessible manner.
-            </p>
+            <p>Joining HackItFirst allowed me to explore the exciting intersection of ethical hacking and game modification. I designed a user-friendly interface for their hacking lessons platform and crafted visually striking pages for game hacks. This experience honed my skills in presenting complex information in an accessible manner.</p>
         </article>
-    </section>
 
-    <section class="skills">
         <h2>🎨 Skills</h2>
         <ul>
             <li><strong>Web Design:</strong> HTML, CSS, JavaScript, Bootstrap</li>
@@ -84,9 +117,7 @@
             <li><strong>UI/UX:</strong> User-centric design, Wireframing, Prototyping</li>
             <li><strong>Collaboration:</strong> Team player, Communication, Project Management</li>
         </ul>
-    </section>
 
-    <section class="projects">
         <h2>🌟 Projects</h2>
 
         <article>
@@ -98,12 +129,13 @@
             <h3>Pac-Man - Coming Soon!</h3>
             <p>Exciting things are in the pipeline! Stay tuned for the upcoming release of my Pac-Man project. Get ready for a dose of retro gaming fun!</p>
         </article>
-    </section>
 
-    <section class="connect">
         <h2>📬 Let's Connect</h2>
         <p>I'm always open to exciting collaborations and new opportunities. Feel free to reach out to me through <a href="https://www.instagram.com/vatistasdimitris/">Instagram</a> or <a href="https://www.linkedin.com/in/dimitris-vatistas/">LinkedIn</a>. Let's create something amazing together!</p>
     </section>
 
+    <script>
+        // Any JavaScript can go here
+    </script>
 </body>
 </html>
