@@ -3,143 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vatistasdimitris</title>
+    <title>Your Name - Portfolio</title>
     <style>
         body {
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-image: url('image.jpg'); /* Set the background image */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            color: #000000; /* Set text color to black */
+            background-color: #f8f8f8; /* Light gray background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
 
-        header {
+        .container {
+            width: 80%;
+            background-color: #fff;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); /* Darker box shadow effect */
             padding: 20px;
-            text-align: center;
         }
 
         section {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: #ffffff; /* Set background color to white */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            color: #000000; /* Set text color to black */
+            margin-bottom: 40px;
         }
 
-        h1, h2 {
-            color: #000000; /* Set text color to black for h1 and h2 */
+        h2 {
+            color: #333;
         }
 
-        h3, p {
-            color: #ffffff; /* Set text color to white for h3 and p */
+        .profile-image {
+            max-width: 100%;
+            border-radius: 50%;
+            margin-bottom: 20px;
         }
 
-        a {
-            color: #000000; /* Set text color to black */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin-right: 20px;
             text-decoration: none;
+            color: #333;
+            font-weight: bold;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .project {
+            border: 1px solid #ddd;
+            padding: 20px; /* Increased padding to make the box bigger */
+            margin-bottom: 40px; /* Increased margin to provide more spacing between projects */
+            position: relative;
+            transition: box-shadow 0.3s ease, height 0.3s ease;
         }
 
-        .join-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #ffffff; /* Set button background color to white */
-            color: #000000; /* Set text color to black */
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
+        .project:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Highlight on hover */
+        }
+
+        .project h3 {
+            margin-bottom: 10px; /* Adjusted margin for project title */
+        }
+
+        .project p {
+            margin-bottom: 20px; /* Adjusted margin for project description */
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow effect for dropdown */
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s linear;
+            padding: 20px; /* Increased padding for dropdown content */
+            border-radius: 5px;
+        }
+
+        .project:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+        }
+
+        .dropdown-content img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px; /* Adjusted margin for the image in the dropdown */
+        }
+
+        .dropdown-btn {
+            display: none;
+            position: absolute;
+            top: 20px; /* Adjusted position for the "Learn more" button */
+            right: 20px; /* Adjusted position for the "Learn more" button */
+            padding: 10px; /* Adjusted padding for the "Learn more" button */
+            border: 2px solid #000;
+            border-radius: 20px;
+            background-color: transparent;
+            color: #000;
             cursor: pointer;
-            border-radius: 8px;
         }
 
-        .join-button:hover {
-            background-color: #dddddd; /* Slightly darker shade for hover effect */
-        }
-    </style>
-    <style>
-        @font-face {
-            font-family: 'Open Sans Regular';
-            font-style: normal;
-            font-weight: 400;
-            src: url('chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/open-sans-v18-latin-regular.woff');
+        .project:hover .dropdown-btn {
+            display: block;
         }
 
-        @font-face {
-            font-family: 'Open Sans Bold';
-            font-style: normal;
-            font-weight: 800;
-            src: url('chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/OpenSans-Bold.woff');
+        .job {
+            border: 1px solid #ddd;
+            padding: 20px; /* Increased padding for the job box */
+            margin-bottom: 40px; /* Increased margin for more spacing between jobs */
+            position: relative;
+            transition: box-shadow 0.3s ease;
         }
 
-        @font-face {
-            font-family: 'Open Sans ExtraBold';
-            font-style: normal;
-            font-weight: 800;
-            src: url('chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/open-sans-v18-latin-800.woff');
+        .job:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Highlight on hover */
+        }
+
+        .job h3 {
+            margin-bottom: 10px; /* Adjusted margin for job title */
+        }
+
+        .job p {
+            margin-bottom: 20px; /* Adjusted margin for job description */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>👨‍💻 Dimitris Vatistas - Web Designer 👨‍💻</h1>
-    </header>
+    <div class="container">
 
-    <section>
-        <h2>🌐 Portfolio | <a href="linkr.bio/dimitrisvatistas">Website</a> | <a href="https://www.linkedin.com/in/dimitris-vatistas/">LinkedIn</a></h2>
-        <p>Hello there! I'm Dimitris Vatistas, a passionate web designer with a knack for creating visually stunning and user-friendly websites. I've had the privilege of working with innovative companies, leaving my mark on the digital world.</p>
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="image.jpg" alt="Your Name" class="profile-image"> <!-- Replace "profile_image.jpg" with the actual path to your profile image -->
+            <p>Hello! I'm Your Name, a web developer passionate about creating meaningful and responsive websites.</p>
+            <div class="social-links">
+                <!-- Add your social media links here -->
+                <a href="https://www.instagram.com/vatistasdimitris/">Instagram</a>
+                <a href="https://www.linkedin.com/in/dimitris-vatistas/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/vatistasdimitris" target="_blank">GitHub</a>
+            </div>
+        </section>
 
-        <h2>🚀 Experience</h2>
+        <section id="projects">
+            <h2>Projects</h2>
 
-        <article>
-            <h3><a href="https://sneakverse.company.site">SneakVerse</a> - Crafting Custom Sneakers</h3>
-            <p><strong>Role:</strong> Lead Web Designer | <strong>Duration:</strong> 2 years</p>
-            <p>At SneakVerse, I played a pivotal role in translating the essence of custom sneakers into a visually appealing and engaging online experience. Collaborating closely with the marketing and design teams, I contributed to creating a dynamic platform that showcases the artistry of custom footwear.</p>
-        </article>
+            <!-- Project 1 -->
+            <div class="project" id="project1Box">
+                <h3>Snake Game</h3>
+                <p>Currently, I'm working on recreating the classic Snake Game. Check out the project to experience the nostalgia and see how I'm bringing a modern touch to this beloved game!</p>
+                <button class="dropdown-btn" onclick="toggleDropdown('project1')">Learn more</button>
+                <div class="dropdown-content" id="project1">
+                <a href="https://github.com/vatistasdimitris/snakegame" target="_blank">Play Game</a>
+                    <img src="image1.jpg" alt="Snake Game">
+                </div>
+            </div>
 
-        <article>
-            <h3><a href="https://techvat.000webhostapp.com/">HackItFirst</a> - Learn Ethical Hacking and Game Hacks</h3>
-            <p><strong>Role:</strong> Web Design Maestro | <strong>Duration:</strong> 1.5 years</p>
-            <p>Joining HackItFirst allowed me to explore the exciting intersection of ethical hacking and game modification. I designed a user-friendly interface for their hacking lessons platform and crafted visually striking pages for game hacks. This experience honed my skills in presenting complex information in an accessible manner.</p>
-        </article>
+            <!-- Project 2 -->
+            <div class="project" id="project2Box">
+                <h3>Pac-Man - Coming Soon!</h3>
+                <p>Exciting things are in the pipeline! Stay tuned for the upcoming release of my Pac-Man project. Get ready for a dose of retro gaming fun!</p>
+                <button class="dropdown-btn" onclick="toggleDropdown('project2')">Learn more</button>
+                <div class="dropdown-content" id="project2">
+                
+                    <img src="image2.jpg" alt="Project 2 Image">
+                </div>
+            </div>
 
-        <h2>🎨 Skills</h2>
-        <ul>
-            <li><strong>Web Design:</strong> HTML, CSS, JavaScript, Bootstrap</li>
-            <li><strong>Graphic Design:</strong> Adobe Creative Suite (Photoshop, Illustrator), Figma</li>
-            <li><strong>UI/UX:</strong> User-centric design, Wireframing, Prototyping</li>
-            <li><strong>Collaboration:</strong> Team player, Communication, Project Management</li>
-        </ul>
+        </section>
 
-        <h2>🌟 Projects</h2>
+        <section id="jobs">
+            <h2>Jobs</h2>
 
-        <article>
-            <h3><a href="https://github.com/vatistasdimitris/snakegame">Snake Game</a></h3>
-            <p>Currently, I'm working on recreating the classic Snake Game. Check out the project to experience the nostalgia and see how I'm bringing a modern touch to this beloved game!</p>
-        </article>
+            <!-- Job 1 -->
+            <div class="job" id="job1Box">
+                <h3>SneakVerse - Crafting Custom Sneakers</h3>
+                <h4>Role: Lead Web Designer | Duration: 2 years</h4>
+              <p>At SneakVerse, I played a pivotal role in translating the essence of custom sneakers into a visually appealing and engaging online experience. Collaborating closely with the marketing and design teams, I contributed to creating a dynamic platform that showcases the artistry of custom footwear.</p>
+            <a href="https://sneakverse.company.site/" target="_blank">Website</a>
+            </div>
 
-        <article>
-            <h3>Pac-Man - Coming Soon!</h3>
-            <p>Exciting things are in the pipeline! Stay tuned for the upcoming release of my Pac-Man project. Get ready for a dose of retro gaming fun!</p>
-        </article>
+           
+            <!-- Job 2 -->
+            <div class="job" id="job2Box">
+                <h3>HackItFirst - Learn Ethical Hacking and Game Hacks</h3>
+                <h4>Role: Web Design Maestro | Duration: 1.5 years</h4>
+                <p>Joining HackItFirst allowed me to explore the exciting intersection of ethical hacking and game modification. I designed a user-friendly interface for their hacking lessons platform and crafted visually striking pages for game hacks. This experience honed my skills in presenting complex information in an accessible manner.</p>
+             <a href="https://techvat.000webhostapp.com/" target="_blank">Website</a>
+            </div>
 
-        <h2>📬 Let's Connect</h2>
-        <p>I'm always open to exciting collaborations and new opportunities. Feel free to reach out to me through <a href="https://www.instagram.com/vatistasdimitris/">Instagram</a> or <a href="https://www.linkedin.com/in/dimitris-vatistas/">LinkedIn</a>. Let's create something amazing together!</p>
-    </section>
+        </section>
+
+        <footer>
+            <!-- Your footer content goes here -->
+        </footer>
+
+    </div>
 
     <script>
-        // Any JavaScript can go here
+        function toggleDropdown(projectId) {
+            var dropdown = document.getElementById(projectId);
+            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+            
+            // Increase the height of the project box when dropdown is open
+            var projectBox = document.getElementById(projectId + 'Box');
+            projectBox.style.height = (dropdown.style.display === 'block') ? 'auto' : 'initial';
+        }
     </script>
+
 </body>
 </html>
